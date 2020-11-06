@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=latex 2020.10.16)  6 NOV 2020 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=latex 2020.10.16)  6 NOV 2020 16:32
 entering extended mode
 **./formato_ieee.tex
 (formato_ieee.tex
@@ -395,7 +395,11 @@ File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
 \g__pdf_backend_link_int=\count288
 \g__pdf_backend_link_sf_int=\count289
 )
-(formato_ieee.aux)
+(formato_ieee.aux
+
+LaTeX Warning: Label `fig:hiper2' multiply defined.
+
+)
 \openout1 = `formato_ieee.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -433,23 +437,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: imagenes/img1.eps Graphic file (type eps)
 
 <imagenes/img1.eps>
-Overfull \hbox (401.44124pt too wide) in paragraph at lines 75--76
-[][] 
- []
+File: imagenes/node.eps Graphic file (type eps)
+ <imagenes/node.eps>
+File: imagenes/node.eps Graphic file (type eps)
+ <imagenes/node.eps>
+File: imagenes/hiper2.eps Graphic file (type eps)
 
-File: imagenes/hiper2.eps Graphic file (type eps)
-<imagenes/hiper2.eps>
-File: imagenes/hiper2.eps Graphic file (type eps)
- <imagenes/hiper2.eps>
-File: imagenes/hiper2.eps Graphic file (type eps)
- <imagenes/hiper2.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+<imagenes/hiper2.eps> [1
 
 
 ]
-Overfull \hbox (4.08205pt too wide) in paragraph at lines 130--147
+Overfull \vbox (79.19136pt too high) has occurred while \output is active []
+
+File: imagenes/hiper2.eps Graphic file (type eps)
+
+<imagenes/hiper2.eps>
+Overfull \hbox (4.08205pt too wide) in paragraph at lines 143--160
  [] 
  []
 
@@ -485,16 +488,18 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[2] (formato_ieee.aux)
 
-] (formato_ieee.aux) ) 
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6166 strings out of 482169
- 97930 string characters out of 2932205
- 392729 words of memory out of 3000000
- 22369 multiletter control sequences out of 15000+200000
+ 6170 strings out of 482169
+ 98002 string characters out of 2932205
+ 392768 words of memory out of 3000000
+ 22372 multiletter control sequences out of 15000+200000
  633883 words of font info for 135 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 60i,9n,70p,697b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,9n,70p,1310b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on formato_ieee.dvi (2 pages, 7612 bytes).
+Output written on formato_ieee.dvi (2 pages, 10140 bytes).
