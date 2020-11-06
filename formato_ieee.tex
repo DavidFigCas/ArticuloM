@@ -65,26 +65,34 @@ La impresión 3D es un proceso de manufactura aditiva donde se debe considerar e
 P=T*F*V*E,
 \end{equation}
 
-Donde:
-P = Precio
+Donde:\\
 
-The system:  
+P = Precio total al cliente.\\
+T = Tiempo necesario.\\
+F = Factor de complejidad.\\
+V = Volumen para empaquetar.\\
+E = Energía necesaria.\\
+
+El Factor de complejidad:  
  \begin{equation}
     \label{Homotopia_G}
-     H(x,\lambda)= \lambda f(x)+ (1-\lambda)(f(x)- f(x_0))=0,
+     F= Resolucion / Area * Altura,
  \end{equation}
  
- \begin{figure}
- 	\includegraphics[scale=0.5]{imagenes/img1.eps}
- 	\caption{ChatBot contestando cotización en Telegram}
- 	\label{fig:img1}
- \end{figure}
+          
      
-     
-     
- where,   $\lambda$ is the homotopy parameter,  $x_0$  is the starting point, $H( x,\lambda) :\mathbb{R}^{n+1}\longrightarrow \mathbb{R}^{n} \text{,} \quad{x} \in\mathbb{R}^{n}$. 
+La Resolución en impresión 3D, hace referencia al grosor con el que la máquina crea cada capa de los objetos impresos, entre más capas son necesarias es mayor el riesgo de que algo salga mal. Otro punto en contra es el Área de impresión del objeto en comparación a la altura, debido a que si esa proporción es muy alta en comparación con la base, puede generar que la base de la pieza que toca la superficie de la impresora se despegue o que sea más fácil que la boquilla la termine golpeando, haciendo la pieza se desprenda y falle, causando perdida de material y tiempo. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.2\textwidth]{imagenes/imp3d.eps} 
+\caption{ Pieza en impresión 3D.}
+\label{fig:hiper2}
+\end{center}
+\end{figure}   
+ 
 \section{Node-RED}
-Existen diferentes paradigmas de programación, uno de los que más terreno ha ganado en estos días ha sido JavaSript por su fácil integración con ambientes web. Tomando como base ese lenguaje se dasarrolló un proyecto denominado Node.JS, donde, se simplifica el modo de programación, generando entornos web, con la posibilidad de comunicarse a través de mensajes o acciones. Por otro lado, han ganado terreno, formas de organizar programas de forma visual, siendo Node-RED, un entorno que junta de manera visual, gran cantidad de librerias, 
+Existen diferentes paradigmas de programación, uno de los que más terreno ha ganado en estos días ha sido JavaSript por su fácil integración con ambientes web. Tomando como base ese lenguaje se dasarrolló un proyecto denominado Node.JS, donde, se simplifica el modo de programación, generando entornos web, con la posibilidad de comunicarse a través de mensajes o acciones. Por otro lado, han ganado terreno, formas de organizar programas de forma visual, siendo Node-RED, un entorno que junta de manera visual, gran cantidad de librerias, su filosofía se basa en simplificar el funcionamiento de las mismas, reduciendo el desarrollo a enviar un mensaje muy simple, que se puede compartir indistintamente a otras funciones y ser procesado por las mismas, generando un flujo de información que se autodocumenta.
 
 \begin{figure}[H]
 \begin{center}
