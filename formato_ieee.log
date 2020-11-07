@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=latex 2020.10.16)  6 NOV 2020 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=latex 2020.10.16)  6 NOV 2020 20:01
 entering extended mode
 **./formato_ieee.tex
 (formato_ieee.tex
@@ -437,13 +437,18 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
 (/home/dave/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 68--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--75
+Underfull \hbox (badness 10000) in paragraph at lines 68--75
 
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 77--78
+[]\T1/ptm/m/n/10 Adicionalmente se va a considerar un Factor de
  []
 
 File: imagenes/imp3d.eps Graphic file (type eps)
@@ -463,27 +468,33 @@ File: imagenes/hiper2.eps Graphic file (type eps)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (4.08205pt too wide) in paragraph at lines 151--168
+Overfull \hbox (4.08205pt too wide) in paragraph at lines 152--169
  [] 
  []
 
 (formato_ieee.bbl
-Underfull \hbox (badness 1642) in paragraph at lines 4--8
+Underfull \hbox (badness 3826) in paragraph at lines 4--7
+\T1/ptm/m/n/8 aditiva. la evidencia de una necesidad,'' \T1/ptm/m/it/8 Interemp
+resas Industria
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 9--13
 \T1/ptm/m/n/8 synchronization based on plc preamble correlation for docsis 3.1
  []
 
 
-Underfull \hbox (badness 7047) in paragraph at lines 10--14
+Underfull \hbox (badness 7047) in paragraph at lines 15--19
 []\T1/ptm/m/n/8 H. Vazquez-Leal, A. Marin-Hernandez, Y. Khan, A. Yildirim,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--21
+Underfull \hbox (badness 10000) in paragraph at lines 21--26
 []\T1/ptm/m/n/8 G. Diaz-Arango, A. Sarmiento-Reyes, L. Hernandez-Martinez,
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 16--21
+Underfull \hbox (badness 2790) in paragraph at lines 21--26
 \T1/ptm/m/n/8 H. Vazquez-Leal, D. Lopez-Hernandez, and A. Marin-Hernandez,
  []
 
@@ -505,12 +516,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6169 strings out of 482169
- 97996 string characters out of 2932205
- 394760 words of memory out of 3000000
- 22371 multiletter control sequences out of 15000+200000
+ 6170 strings out of 482169
+ 98020 string characters out of 2932205
+ 395763 words of memory out of 3000000
+ 22372 multiletter control sequences out of 15000+200000
  633883 words of font info for 135 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  60i,9n,70p,1310b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on formato_ieee.dvi (2 pages, 10976 bytes).
+Output written on formato_ieee.dvi (2 pages, 11540 bytes).
