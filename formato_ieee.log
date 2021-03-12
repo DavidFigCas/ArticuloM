@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=latex 2020.10.16)  23 OCT 2020 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=latex 2020.10.16)  6 NOV 2020 20:01
 entering extended mode
 **./formato_ieee.tex
 (formato_ieee.tex
@@ -395,7 +395,14 @@ File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
 \g__pdf_backend_link_int=\count288
 \g__pdf_backend_link_sf_int=\count289
 )
-(formato_ieee.aux)
+(formato_ieee.aux
+
+LaTeX Warning: Label `fig:hiper2' multiply defined.
+
+
+LaTeX Warning: Label `fig:hiper2' multiply defined.
+
+)
 \openout1 = `formato_ieee.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -418,60 +425,76 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-[]\T1/ptm/b/n/10 Keywords\T1/ptm/m/n/10 : Homotopy continuation methods, Path
- []
-
-** WARNING: \IEEEPARstart is locked out when in conference mode (line 54).
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+** WARNING: \IEEEPARstart is locked out when in conference mode (line 57).
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
 
 (/home/dave/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
 
 
 (/home/dave/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-File: imagenes/img1.eps Graphic file (type eps)
+Underfull \hbox (badness 10000) in paragraph at lines 68--75
 
-<imagenes/img1.eps>
-Overfull \hbox (401.44124pt too wide) in paragraph at lines 72--73
-[][] 
  []
 
-File: imagenes/hiper2.eps Graphic file (type eps)
-<imagenes/hiper2.eps>
-File: imagenes/hiper2.eps Graphic file (type eps)
- <imagenes/hiper2.eps>
-File: imagenes/hiper2.eps Graphic file (type eps)
- <imagenes/hiper2.eps> [1
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--75
+
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 77--78
+[]\T1/ptm/m/n/10 Adicionalmente se va a considerar un Factor de
+ []
+
+File: imagenes/imp3d.eps Graphic file (type eps)
+<imagenes/imp3d.eps> [1
 
 
 ]
-Overfull \hbox (4.08205pt too wide) in paragraph at lines 127--144
+File: imagenes/node.eps Graphic file (type eps)
+ <imagenes/node.eps>
+File: imagenes/node.eps Graphic file (type eps)
+ <imagenes/node.eps>
+File: imagenes/hiper2.eps Graphic file (type eps)
+
+<imagenes/hiper2.eps>
+File: imagenes/hiper2.eps Graphic file (type eps)
+ <imagenes/hiper2.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (4.08205pt too wide) in paragraph at lines 152--169
  [] 
  []
 
 (formato_ieee.bbl
-Underfull \hbox (badness 1642) in paragraph at lines 4--8
+Underfull \hbox (badness 3826) in paragraph at lines 4--7
+\T1/ptm/m/n/8 aditiva. la evidencia de una necesidad,'' \T1/ptm/m/it/8 Interemp
+resas Industria
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 9--13
 \T1/ptm/m/n/8 synchronization based on plc preamble correlation for docsis 3.1
  []
 
 
-Underfull \hbox (badness 7047) in paragraph at lines 10--14
+Underfull \hbox (badness 7047) in paragraph at lines 15--19
 []\T1/ptm/m/n/8 H. Vazquez-Leal, A. Marin-Hernandez, Y. Khan, A. Yildirim,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--21
+Underfull \hbox (badness 10000) in paragraph at lines 21--26
 []\T1/ptm/m/n/8 G. Diaz-Arango, A. Sarmiento-Reyes, L. Hernandez-Martinez,
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 16--21
+Underfull \hbox (badness 2790) in paragraph at lines 21--26
 \T1/ptm/m/n/8 H. Vazquez-Leal, D. Lopez-Hernandez, and A. Marin-Hernandez,
  []
 
@@ -487,16 +510,18 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[2] (formato_ieee.aux)
 
-] (formato_ieee.aux) ) 
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6166 strings out of 482169
- 97870 string characters out of 2932205
- 390729 words of memory out of 3000000
- 22369 multiletter control sequences out of 15000+200000
+ 6170 strings out of 482169
+ 98020 string characters out of 2932205
+ 395763 words of memory out of 3000000
+ 22372 multiletter control sequences out of 15000+200000
  633883 words of font info for 135 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 60i,9n,70p,332b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,9n,70p,1310b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on formato_ieee.dvi (2 pages, 6772 bytes).
+Output written on formato_ieee.dvi (2 pages, 11540 bytes).

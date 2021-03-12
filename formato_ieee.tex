@@ -25,11 +25,14 @@
 \begin{document}
 
 \title{Proyecto de Investigación de cotizador automático por medio de ChatBots}
-\author{
+\author
+{
 \IEEEauthorblockN{D.~Figueroa-Castañeda}\\
-\IEEEauthorblockA{Universidad Interamericana~ Maestría en Automatizac,\\
-Puebla,~Mexico \\
-Email: \{david\_d.figueroa@lainter.edu.mx}
+\IEEEauthorblockA
+{
+	Universidad Interamericana~ Maestría en automatización industrial, \\manufactura 		digital, y robótica\\
+	Puebla,~Mexico \\
+	email: \{d.figueroa@lainter.edu.mx}
 }
 
 
@@ -44,47 +47,69 @@ Email: \{david\_d.figueroa@lainter.edu.mx}
 
  
 \begin{abstract}
- In this paper, ... Finally, a simulation ... is shown.
+ ~En ésta investigación se abordará la integración de programas con capacidad de interactuar por medio de texto con usuarios humanos, conocidos como ChatBot's, para la automatización del proceso de cotización de productos y servicios a través de Internet, en específico, del servicio de Impresión 3D y manufactura aditiva. A través de Telegram y Facebook usando Node-RED, que es una plataforma de programación visual que permite integrar diferentes servicios WEB a través de API's y control de Hardware facilmente, permitiendo administrar también el flujo de trabajo de una granja de impresoras 3D.
 \end{abstract}
 \vspace{0.5cm}
-\textbf{Keywords}:  Homotopy continuation methods, Path Planning, Mobile  robot, ROS.
+\textbf{Keywords}:  ChatBot, Node-RED, Cotizador automático, Impresión 3D.
 
 \IEEEpeerreviewmaketitle
 \section{Introduccion}
-\IEEEPARstart{I}n recent decades,... This paper is organized as follows. In Section $\mathbf{II}$, ... In Section $\mathbf{IV}$... Some simulations in Section $\mathbf{VI}$. Finally, the conclusions are presented in Section $\mathbf{VII}$.
+\IEEEPARstart{A}ctualmente es muy común encontrar procesos donde un programa puede facilmente solventar tareas repetitivas, desde sujetar una pieza y depositarla en un lugar en específico dentro de una linea de producción, hasta contestar el teléfono y agendar una cita como se ha visto en algunos desarrollos de empresas como Google. La situacción actual de confinamiento hace necesario una mayor demanda de servicios a través de internet, exigiendo a muchas empresas a innovar en soluciones que les permita continuar prestando servicios, presindiendo de la fuerza laboral presencial y dando paso a formas de trabajo remoto y en el mejor de los casos más automatizado. Esta investigación se encuentra organizada de la siguiente manera. En la Sección $\mathbf{II}$, se hablará del proceso de impresión 3D y la necesidad de integrar un ChatBot que realice cotizaciones, en la Sección $\mathbf{III}$ se abordará el uso de Node-RED para desarrollar el algoritmo de cotización de la impresión 3D, así como el ChatBot. En la Sección $\mathbf{IV}$ se introduce, la Raspberry Pi 4, como la plataforma donde correrá nuestro programa. Finalmente, las conclusiones son presentadas en la Sección $\mathbf{V}$.
 
-\section{Homotopic Continuation Method}
+\section{Impresión 3D}
 
-Homotopy continuation method..
+La impresión 3D es un proceso de manufactura aditiva, es decir consiste en ir agregando capas de material una sobre otra hasta formar un objeto con volumen, para poder calcular el costo de manufactura del prototipo se debe considerar el material usado en el proceso, el costo de producción que considera la depreciación de la máquina, el procesado del modelo 3D, en ese punto se puede considerar un factor de complejidad y con esos parametros, se puede realizar una cotización más adecuada y justa con el cliente final \cite{jimenez2013fabricacion}.
 
 \begin{equation}
 \label{ohm}
-V=I*R:\quad\mathbb{R}^{n}\longrightarrow\mathbb{R}^{n},
+C_p = C_e + C_m + C_t + C_a
 \end{equation}
 
-The system:  
+Donde:\\
+~\\
+C= Costo total del prototipo.\\
+e = Costo de producción (datos de depreciación de la máquina).\\
+m = Costo del material.\\
+t = Costo del procesado del modelo 3D y mano de obra.\\
+a = Costo de acabado y postprocesado.\\
+
+
+Adicionalmente se va a considerar un Factor de complejidad:  
  \begin{equation}
     \label{Homotopia_G}
-     H(x,\lambda)= \lambda f(x)+ (1-\lambda)(f(x)- f(x_0))=0,
+     F= Resolucion / Area * Altura,
  \end{equation}
  
- \begin{figure}
- 	\includegraphics[scale=1]{imagenes/img1.eps}
- 	\caption{Imagen de prueba}
- 	\label{fig:img1}
- \end{figure}
+          
      
-     
-     
- where,   $\lambda$ is the homotopy parameter,  $x_0$  is the starting point, $H( x,\lambda) :\mathbb{R}^{n+1}\longrightarrow \mathbb{R}^{n} \text{,} \quad{x} \in\mathbb{R}^{n}$. 
-\section{Obstacles}
-HPPM uses the...%-----------------------------------------------------------------------------------------------------------
+La Resolución en impresión 3D, hace referencia al grosor con el que la máquina crea cada capa de los objetos impresos, entre más capas son necesarias es mayor el riesgo de que algo salga mal. Otro punto en contra es el Área de impresión del objeto en comparación a la altura, debido a que si esa proporción es muy alta en comparación con la base, puede generar que la base de la pieza que toca la superficie de la impresora se despegue o que sea más fácil que la boquilla la termine golpeando, haciendo la pieza se desprenda y falle, causando perdida de material y tiempo. 
 
-\section{Spherical}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.2\textwidth]{imagenes/imp3d.eps} 
+\caption{ Pieza en impresión 3D.}
+\label{fig:hiper2}
+\end{center}
+\end{figure}   
+ 
+\section{Node-RED}
+Existen diferentes paradigmas de programación, uno de los que más terreno ha ganado en estos días ha sido JavaSript por su fácil integración con ambientes web. Tomando como base ese lenguaje se dasarrolló un proyecto denominado Node.JS, donde, se simplifica el modo de programación, generando entornos web, con la posibilidad de comunicarse a través de mensajes o acciones. Por otro lado, han ganado terreno, formas de organizar programas de forma visual, siendo Node-RED, un entorno que junta de manera visual, gran cantidad de librerias, su filosofía se basa en simplificar el funcionamiento de las mismas, reduciendo el desarrollo a enviar un mensaje muy simple, que se puede compartir indistintamente a otras funciones y ser procesado por las mismas, generando un flujo de información que se autodocumenta.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.2\textwidth]{imagenes/node.eps} 
+\caption{ Nodos y Flujos en Node-RED.}
+\label{fig:hiper2}
+\end{center}
+\end{figure}    
+
+%-----------------------------------------------------------------------------------------------------------
+
+\section{Node-RED}
  \begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.2\textwidth]{imagenes/hiper2.eps} 
-\caption{ Seguimiento.}
+\includegraphics[width=0.2\textwidth]{imagenes/node.eps} 
+\caption{ Nodos y Flujos en Node-RED.}
 \label{fig:hiper2}
 \end{center}
 \end{figure}    
